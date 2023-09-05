@@ -53,7 +53,7 @@ const Description: FC<DescriptionProps> = ({}) => {
           data-scroll-speed={0.1}
           className="button top-[80%] left-[calc(100%-200px)] w-44 h-44 bg-[#1c1d20] text-white rounded-full absolute flex items-center justify-center cursor-pointer"
         >
-          About Me
+          About Mee
         </div>
         {/* </Magnetic> */}
       </div>
