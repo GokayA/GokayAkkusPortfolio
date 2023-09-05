@@ -1,6 +1,7 @@
 'use client';
 import { motion, useInView } from 'framer-motion';
 import { FC, useRef } from 'react';
+import Magnetic from './Magnetic';
 import {
   descriptionOpacity,
   descriptionSlideUp,
@@ -47,15 +48,15 @@ const Description: FC<DescriptionProps> = ({}) => {
           hic, corrupti quos neque ex nemo. Vero quae temporibus nemo, facilis
           quas deleniti!
         </motion.p>
-        {/* <Magnetic> */}
-        <div
-          data-scroll
-          data-scroll-speed={0.1}
-          className="button top-[80%] left-[calc(100%-200px)] w-44 h-44 bg-[#1c1d20] text-white rounded-full absolute flex items-center justify-center cursor-pointer"
-        >
-          About Me
-        </div>
-        {/* </Magnetic> */}
+        <Magnetic>
+          <div
+            data-scroll
+            data-scroll-speed={0.1}
+            className="button top-[80%] left-[calc(100%-200px)] w-44 h-44 bg-[#1c1d20] text-white rounded-full absolute flex items-center justify-center cursor-pointer"
+          >
+            About Me
+          </div>
+        </Magnetic>
       </div>
     </div>
   );
