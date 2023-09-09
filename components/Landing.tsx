@@ -8,7 +8,7 @@ const Landing: FC<LandingProps> = ({}) => {
     <div className="flex relative h-[100vh] overflow-hidden">
       <Image
         className="object-cover"
-        src="/background.jpg"
+        src="/background.png"
         alt="landing background image"
         fill
       />
