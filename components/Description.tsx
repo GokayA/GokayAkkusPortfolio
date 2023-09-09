@@ -23,7 +23,7 @@ const Description: FC<DescriptionProps> = ({}) => {
               <span
                 key={index}
                 ref={containerRef}
-                className="text-3xl mr-1 inline-flex relative overflow-hidden font-light"
+                className="gap-2 text-3xl mr-1 inline-flex relative overflow-hidden font-light"
               >
                 <motion.span
                   custom={index}

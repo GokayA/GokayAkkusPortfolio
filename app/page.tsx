@@ -1,6 +1,7 @@
 'use client';
 import Description from '@/components/Description';
 import Landing from '@/components/Landing';
+import Projects from '@/components/Projects';
 import { useEffect } from 'react';
 
 export default function Home() {
@@ -14,6 +15,7 @@ export default function Home() {
     <main>
       <Landing />
       <Description />
+      <Projects />
     </main>
   );
 }
