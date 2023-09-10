@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { FC } from 'react';
+import Footer from './Footer';
 import { navbarMenuSlide, navbarSlide } from './transitions/transitions';
 
 interface NavbarProps {}
@@ -26,7 +27,7 @@ const Navbar: FC<NavbarProps> = ({}) => {
   ];
   return (
     <motion.div
-      className="flex justify-between p-10 h-full fixed right-0 top-0 bg-[#292929] text-white z-[30]"
+      className="flex justify-between sm:p-10  h-full fixed right-0 top-0 bg-[#292929] text-white z-[30]"
       variants={navbarMenuSlide}
       initial="initial"
       animate="enter"
@@ -50,7 +51,8 @@ const Navbar: FC<NavbarProps> = ({}) => {
             );
           })}
         </div>
-      </div>{' '}
+        <Footer />
+      </div>
     </motion.div>
   );
 };

@@ -1,4 +1,5 @@
 'use client';
+import Contact from '@/components/Contact';
 import Description from '@/components/Description';
 import Landing from '@/components/Landing';
 import Projects from '@/components/Projects';
@@ -16,6 +17,7 @@ export default function Home() {
       <Landing />
       <Description />
       <Projects />
+      <Contact />
     </main>
   );
 }
