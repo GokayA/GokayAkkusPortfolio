@@ -3,6 +3,6 @@
 @tailwind utilities;
 
 body {
-  /* @apply overflow-hidden m-0; */
+  @apply overflow-hidden m-0;
   /* cursor: wait; */
 }

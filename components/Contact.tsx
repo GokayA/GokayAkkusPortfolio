@@ -1,13 +1,24 @@
-import { motion } from 'framer-motion';
+import { motion, useScroll, useTransform } from 'framer-motion';
 import Image from 'next/image';
-import { FC } from 'react';
+import { useRef } from 'react';
 
-interface ContactProps {}
+const Contact = ({}) => {
+  const contactRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: contactRef,
+    offset: ['start end', 'end end'],
+  });
+  const x = useTransform(scrollYProgress, [0, 1], [0, 100]);
+  const rotate = useTransform(scrollYProgress, [0, 1], [120, 90]);
+  const y = useTransform(scrollYProgress, [0, 1], [-500, 0]);
 
-const Contact: FC<ContactProps> = ({}) => {
   return (
-    <motion.div className="text-white flex flex-col items-center justify-center bg-blue-500 relative">
-      <div className="pt-52 w-full bg-stone-800">
+    <motion.div
+      style={{ y }}
+      ref={contactRef}
+      className="text-white flex flex-col items-center justify-center bg-blue-500"
+    >
+      <div className="pt-80 w-full bg-stone-800">
         <div className="border-b-2 pb-24 mx-52 relative">
           <span className="flex items-center">
             <div className="w-24 h-24 relative rounded-full overflow-hidden">
@@ -22,7 +33,7 @@ const Contact: FC<ContactProps> = ({}) => {
           </span>
           <h2>together</h2>
           <motion.div
-            style={{ x: 'x' }}
+            style={{ x }}
             className="absolute left-[calc(100%-400px)] top-(calc(100%-75px)]"
           >
             <div className="bg-red-500 w-44 h-44 text-white rounded-full absolute flex items-center justify-center cursor-pointer">
@@ -30,7 +41,7 @@ const Contact: FC<ContactProps> = ({}) => {
             </div>
           </motion.div>
           <motion.svg
-            style={{ rotate: 'rotate', scale: 2 }}
+            style={{ rotate, scale: 2 }}
             className="absolute top-32 left-full"
             width="9"
             height="9"
@@ -42,7 +53,7 @@ const Contact: FC<ContactProps> = ({}) => {
               d="M8 8.5C8.27614 8.5 8.5 8.27614 8.5 8L8.5 3.5C8.5 3.22386 8.27614 3 8 3C7.72386 3 7.5 3.22386 7.5 3.5V7.5H3.5C3.22386 7.5 3 7.72386 3 8C3 8.27614 3.22386 8.5 3.5 8.5L8 8.5ZM0.646447 1.35355L7.64645 8.35355L8.35355 7.64645L1.35355 0.646447L0.646447 1.35355Z"
               fill="white"
             />
-          </motion.svg>{' '}
+          </motion.svg>
         </div>
         <div className="flex gap-5 mt-24 mx-48">
           <div>
@@ -66,7 +77,7 @@ const Contact: FC<ContactProps> = ({}) => {
               </span>
             </div>
           </div>
-          <div>
+          {/* <div>
             <span className="flex flex-col gap-4">
               <h3>Socials</h3>
               <p>aww</p>
@@ -74,7 +85,7 @@ const Contact: FC<ContactProps> = ({}) => {
             <span>Instagram</span>
             <span>Github</span>
             <span>Linkedin</span>
-          </div>
+          </div> */}
         </div>
       </div>
     </motion.div>
