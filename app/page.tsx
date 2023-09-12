@@ -10,7 +10,6 @@ export default function Home() {
   const [isLoading, setIsLoading] = useState(false);
   useEffect(() => {
     (async () => {
-    (async () => {
       const LocomotiveScroll = (await import('locomotive-scroll')).default;
       const locomotiveScroll = new LocomotiveScroll();
       setTimeout(() => {
@@ -24,7 +23,6 @@ export default function Home() {
       <Landing />
       <Description />
       <Projects />
-      <SlidingIcons />
       <SlidingIcons />
       <Contact />
     </main>

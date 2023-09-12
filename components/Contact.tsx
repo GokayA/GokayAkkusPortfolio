@@ -1,19 +1,10 @@
-import { motion, motion, useScroll, useScroll, useTransform, useTransform } from 'framer-motion';
+import { motion, useScroll, useTransform } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRef } from 'react';
 import Magnetic from './Magnetic';
 
-const Contact = ({}) => {
-  const contactRef = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: contactRef,
-    offset: ['start end', 'end end'],
-  });
-  const x = useTransform(scrollYProgress, [0, 1], [0, 100]);
-  const rotate = useTransform(scrollYProgress, [0, 1], [120, 90]);
-  const y = useTransform(scrollYProgress, [0, 1], [-500, 0]);
-const Contact = ({}) => {
+const Contact = () => {
   const contactRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: contactRef,
@@ -45,7 +36,6 @@ const Contact = ({}) => {
           <h2 className="text-7xl font-thin ">Out Me</h2>
           <motion.div
             style={{ x }}
-            style={{ x }}
             className="absolute left-[calc(100%-400px)] top-(calc(100%-75px)]"
           >
             <Magnetic>
@@ -57,7 +47,6 @@ const Contact = ({}) => {
             </Magnetic>
           </motion.div>
           <motion.svg
-            style={{ rotate, scale: 2 }}
             style={{ rotate, scale: 2 }}
             className="absolute top-32 left-full"
             width="9"
@@ -71,10 +60,8 @@ const Contact = ({}) => {
               fill="white"
             />
           </motion.svg>
-          </motion.svg>
         </div>
         <div className="flex gap-5 mt-24 mx-48">
-          {/* this part will be belowe te get in touch line on the left */}
           <div>
             <button>ggokay.akkus@gmail.com</button>
           </div>
@@ -94,7 +81,7 @@ const Contact = ({}) => {
             </div>
             <div className="right flex flex-col text-lg">
               <h3 className="text-gray-300 font-thin text-2xl">Socials</h3>
-              {/* How to put this part right side of page */}
+
               <Link href="https://linkedin.com" target="_blank">
                 LinkedIn
               </Link>
@@ -104,7 +91,7 @@ const Contact = ({}) => {
               </Link>
               <div className="border-b-[1px] border-white"></div>
               <Link href="https://www.discord.com" target="_blank">
-                Discord
+                Discordd
               </Link>
               <div className="border-b-[1px] border-white"></div>
             </div>
