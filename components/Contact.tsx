@@ -1,9 +1,10 @@
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { motion, motion, useScroll, useScroll, useTransform, useTransform } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRef } from 'react';
 import Magnetic from './Magnetic';
 
+const Contact = () => {
 const Contact = () => {
   const contactRef = useRef(null);
   const { scrollYProgress } = useScroll({
