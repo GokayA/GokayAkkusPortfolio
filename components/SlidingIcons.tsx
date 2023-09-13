@@ -70,7 +70,7 @@ const SlidingIcons: FC<SlidingImagesProps> = ({}) => {
     >
       <motion.div
         style={{ x: x1 }}
-        className="slider relative flex sm:w-[120vw] -left-[10vw] gap-[3vw]"
+        className="slider relative flex w-full sm:w-[120vw] -left-[10vw] gap-[3vw]"
       >
         {slider1.map((project, index) => {
           return (
