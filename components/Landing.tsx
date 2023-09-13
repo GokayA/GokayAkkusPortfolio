@@ -5,7 +5,7 @@ interface LandingProps {}
 
 const Landing: FC<LandingProps> = ({}) => {
   return (
-    <div className="flex relative h-[100vh] overflow-hidden">
+    <div className=" flex relative h-[100vh] overflow-hidden">
       <Image
         className="object-cover"
         src="/background.png"

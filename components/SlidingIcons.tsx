@@ -66,7 +66,7 @@ const SlidingIcons: FC<SlidingImagesProps> = ({}) => {
   return (
     <div
       ref={containerRef}
-      className="slidingImages flex flex-col relative z-[2] gap-[3vw] mt-48  mb-12 bg-white"
+      className="overflow-hidden slidingImages flex flex-col relative z-[2] gap-[3vw] mt-48  mb-12 bg-white"
     >
       <motion.div
         style={{ x: x1 }}

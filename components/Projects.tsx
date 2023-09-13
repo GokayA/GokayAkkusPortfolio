@@ -31,7 +31,7 @@ const projects = [
 const Projects: FC<ProjectsProps> = ({}) => {
   const [modal, setModal] = useState({ active: false, index: 0 });
   return (
-    <div className="mt-48 mb-12 bg-white  flex items-center  justify-center h-[100vh]">
+    <div className="overflow-hidden mt-48 mb-12 bg-white  flex items-center  justify-center h-[100vh]">
       <div className="w-[1000px] flex items-center justify-center flex-col">
         {projects.map((project, index) => {
           return (

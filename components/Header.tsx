@@ -64,7 +64,7 @@ const Header: FC<HeaderProps> = ({}) => {
     });
   }, []);
   return (
-    <div className="flex justify-between p-10 w-full font-light absolute z-10 top-0 text-white  items-center">
+    <div className="overflow-hidden flex justify-between p-10 w-full font-light absolute z-10 top-0 text-white  items-center">
       <Magnetic>
         <div data-scroll data-scroll-speed={0.1} className="">
           Gokay Akkus

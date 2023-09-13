@@ -15,22 +15,36 @@ const Contact = () => {
   const y = useTransform(scrollYProgress, [0, 1], [-500, 0]);
 
   return (
-    <div className="pb-10  pt-42 px-20 grid grid-cols-4 grid-rows-4 gap-4 ">
-      <div className="font-thin text-6xl">Contacts</div>
-      <div className="col-start-1 row-start-4 ">
-        <h1 className=" text-gray-400 text-2xl">Write me a message</h1>
-        <p className="font-bold  text-xl">ggokay.akkus@gmail.com</p>
-        <h1 className="text-gray-400 text-2xl">Socials</h1>
-        <p className="font-bold text-xl">LinkedIn</p>
-        <p className="font-bold text-xl">Github</p>
-        <p className="font-bold text-xl">Instagram</p>
-      </div>
-      <div className="col-span-4 col-start-2 row-start-4">
-        <div className="flex items-end">
-          <p className="text-9xl font-bold">Hello</p>
-          <p className="text-8xl font-thin">l</p>
+    <div className="overflow-hidden relative z-0 flex flex-col justify-between px-20 w-full h-[100vh]  pt-52 items-start content-start bg-[#141516] ">
+      <div className="Top h-full text-6xl font-thin text-white">Contacts</div>
+      <div className="Bottom pb-10">
+        <div className="flex sm:flex-row flex-col gap-2 sm:gap-10">
+          <div className="left">
+            <h1 className="text-xl text-gray-400 ">Send me a message</h1>
+            <p className="font-bold text-xl text-white">
+              ggokay.akkus@gmail.com
+            </p>
+            <div className="pt-10">
+              <h1 className="text-xl text-gray-400 ">Socials</h1>
+              <p className="font-bold text-xl text-white">LinkedIn</p>
+              <p className="font-bold text-xl text-white">LinkedIn</p>
+              <p className="font-bold text-xl text-white">LinkedIn</p>
+            </div>
+          </div>
+          <div className="Right">
+            <Magnetic>
+              <div className="flex items-end">
+                <h1 className="text-8xl sm:text-9xl font-bold text-gray-500">
+                  Hello
+                </h1>
+                <p className="text-7xl sm:text-7xl font-thin pb-2 text-gray-500">
+                  |
+                </p>
+              </div>
+            </Magnetic>
+            <div className="absolute border-b-2 border-white w-full"></div>
+          </div>
         </div>
-        <div className="w-full border-b-2 border-black"></div>
       </div>
     </div>
   );
