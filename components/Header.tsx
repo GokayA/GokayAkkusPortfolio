@@ -64,26 +64,7 @@ const Header: FC<HeaderProps> = ({}) => {
     });
   }, []);
   return (
-    <div className="overflow-hidden flex justify-between p-10 w-full font-light absolute z-10 top-0 text-white  items-center">
-      <Magnetic>
-        <div data-scroll data-scroll-speed={0.1} className="">
-          Gokay Akkus
-        </div>
-      </Magnetic>
-      <div className="flex items-center">
-        <div className="flex flex-col relative z-10 p-4 cursor-pointer group">
-          <p>Home</p>
-          <div className="indicator bg-white w-2 h-2 scale-0 group group-hover:scale-100 absolute left-1/2 translate-x-1/2 transition-transform ease-in duration-100 rounded-full top-11 font-bold text-white"></div>
-        </div>
-        <div className="flex flex-col relative z-10 p-4 cursor-pointer group">
-          <p>Projects</p>
-          <div className="indicator bg-white w-2 h-2 scale-0 group group-hover:scale-100 absolute left-1/2 translate-x-1/2 transition-transform ease-in duration-100 rounded-full top-11 font-bold text-white"></div>
-        </div>
-        <div className="flex flex-col relative z-10 p-4 cursor-pointer group">
-          <p>About</p>
-          <div className="indicator bg-white w-2 h-2 scale-0 group group-hover:scale-100 absolute left-1/2 translate-x-1/2 transition-transform ease-in duration-100 rounded-full top-11 font-bold text-white"></div>
-        </div>
-      </div>
+    <div className="overflow-hidden flex justify-end p-10 w-full font-light absolute z-10 top-0 text-white  items-center">
       <div
         ref={burgerRef}
         onClick={() => setIsActive(!isActive)}

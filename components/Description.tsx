@@ -15,8 +15,8 @@ const Description: FC<DescriptionProps> = ({}) => {
   const phrase =
     'Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit necessitatibus ex fugiat, accusamus ea vel ratione consequatur sequi qui ipsum nisi aut quas nemo ipsa, laborum itaque, officiis unde. Consequuntur.';
   return (
-    <div className=" mt-48 px-48 flex justify-center">
-      <div className="flex max-w-[1400px] relative gap-12">
+    <div className="mt-48 px-8 flex justify-center ">
+      <div className="flex sm:flex-row flex-col max-w-[1400px] relative gap-12">
         <p className="m-0">
           {phrase.split(' ').map((word, index) => {
             return (
