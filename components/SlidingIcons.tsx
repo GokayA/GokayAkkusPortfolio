@@ -66,7 +66,7 @@ const SlidingIcons: FC<SlidingImagesProps> = ({}) => {
   return (
     <div
       ref={containerRef}
-      className="overflow-x-visible slidingImages flex flex-col relative z-[2] gap-[3vw] mt-48  mb-12 bg-white"
+      className="overflow-x-visible slidingImages flex flex-col relative z-[2] gap-[3vw] pt-48  pb-12 bg-[#f4f4f4]"
     >
       <motion.div
         style={{ x: x1 }}
@@ -103,7 +103,7 @@ const SlidingIcons: FC<SlidingImagesProps> = ({}) => {
         })}
       </motion.div>
       <motion.div style={{ height }} className="circleContainer relative mt-24">
-        <div className="circle shadow-[0_60px_50px_rgba(0,0,0,0.748)] absolute h-[1550%] w-[120%] -left-[10%] bg-white rounded-[0%_0%_50%_50%] z-10"></div>
+        <div className="circle shadow-[0_60px_50px_rgba(0,0,0,0.748)] absolute h-[1550%] w-[120%] -left-[10%] bg-[##f4f4f4] rounded-[0%_0%_50%_50%] z-10"></div>
       </motion.div>
     </div>
   );

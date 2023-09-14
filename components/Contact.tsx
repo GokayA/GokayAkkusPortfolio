@@ -52,7 +52,7 @@ const Contact = () => {
                 </motion.p>
               </div>
             </Magnetic>
-            <div className="absolute border-b-2 border-white w-full"></div>
+            <div className="absolute border-b-2 border-[#f4f4f4] w-full"></div>
           </div>
         </div>
       </div>

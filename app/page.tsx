@@ -19,7 +19,7 @@ export default function Home() {
     })();
   }, []);
   return (
-    <main>
+    <main className="bg-[#141516]">
       <Landing />
       <Description />
       <Projects />

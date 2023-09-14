@@ -13,24 +13,33 @@ const Description: FC<DescriptionProps> = ({}) => {
   const containerRef = useRef(null);
   const isInView = useInView(containerRef);
   const phrase =
-    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit necessitatibus ex fugiat, accusamus ea vel ratione consequatur sequi qui ipsum nisi aut quas nemo ipsa, laborum itaque, officiis unde. Consequuntur.';
+    'I AM CURRENTLY PART OF THE DESIGN TEAM AT SOPRA STERIA IN MADRID, AND I HAVE HAD THE OPPORTUNITY TO HELP CREATE DIGITAL EXPERIENCES AND SOLUTIONS FOR BIG BRANDS FOR THE LAST 20 YEARS OF MY LIFE. I CONSIDER MYSELF PASSIONATE ABOUT TECHNOLOGY, WORKING AT THE INTERSECTION BETWEEN BRANDING AND DIGITAL PRODUCT DESIGN.';
   return (
-    <div className="mt-48 px-8 flex justify-center ">
-      <div className="flex sm:flex-row flex-col max-w-[1400px] relative gap-12">
+    <div className="pt-48 px-8 flex justify-center rounded-t-[4rem] bg-[#f4f4f4] pb-20">
+      <div className="flex  items-center  flex-col w-[40rem] relative gap-12  text-center">
+        <Magnetic>
+          <div
+            data-scroll
+            data-scroll-speed={0.1}
+            className="font-bold text-2xl button w-44 h-44 bg-[#1c1d20] text-white rounded-full  flex items-center justify-center cursor-pointer"
+          >
+            About Me
+          </div>
+        </Magnetic>
         <p className="m-0">
           {phrase.split(' ').map((word, index) => {
             return (
               <span
                 key={index}
                 ref={containerRef}
-                className="gap-2 text-3xl mr-1 inline-flex relative overflow-hidden font-light"
+                className="gap-2 mr-1 inline-flex relative overflow-hidden "
               >
                 <motion.span
                   custom={index}
                   variants={descriptionSlideUp}
                   initial="initial"
                   animate={isInView ? 'open' : 'closed'}
-                  className="text-lg w-[80%] font-medium"
+                  className="text-lg w-[80%] font-semibold leading-6"
                 >
                   {word}
                 </motion.span>
@@ -42,21 +51,14 @@ const Description: FC<DescriptionProps> = ({}) => {
           variants={descriptionOpacity}
           initial="initial"
           animate={isInView ? 'open' : 'closed'}
+          className="font-semibold leading-6"
         >
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod
-          provident, perspiciatis explicabo eum eius excepturi nisi corporis,
-          hic, corrupti quos neque ex nemo. Vero quae temporibus nemo, facilis
-          quas deleniti!
+          NOW, I WORK HAND IN HAND WITH BBVA DESIGN AND USER EXPERIENCE TEAM
+          HELPING TO IMPROVE THEIR DIGITAL PRODUCTS BY BALANCING BUSINESS
+          PRIORITIES WITH THOSE OF THE THOUSANDS OF USERS WHO USE THEIR
+          SERVICES. FROM THE EARLY STAGES OF DEFINITION AND IDEATION, TO THE
+          REVIEW OF INTERACTION FLOWS AND USER TESTING.
         </motion.p>
-        <Magnetic>
-          <div
-            data-scroll
-            data-scroll-speed={0.1}
-            className="button top-[80%] left-[calc(100%-200px)] w-44 h-44 bg-[#1c1d20] text-white rounded-full absolute flex items-center justify-center cursor-pointer"
-          >
-            About Me
-          </div>
-        </Magnetic>
       </div>
     </div>
   );

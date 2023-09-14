@@ -5,8 +5,9 @@ interface LandingProps {}
 
 const Landing: FC<LandingProps> = ({}) => {
   return (
-    <div className="flex relative h-[100vh] overflow-hidden text-white  justify-between p-4 sm:p-20 bg-[#141516]">
+    <div className="flex relative h-[100vh] overflow-hidden text-white  justify-between p-4 sm:p-20">
       <div className="flex flex-col justify-between">
+        {/* NEED TO CHANGE FONT AND TEXT LEADING MAYBE TO MAKE IT BEAUTIFUL ! */}
         <div>
           <h1 className="text-6xl sm:text-9xl ">I&apos;m Gokay</h1>
           <h1 className="text-6xl sm:text-9xl ">Akkus</h1>
@@ -18,7 +19,7 @@ const Landing: FC<LandingProps> = ({}) => {
             </h1>
           </div>
           <div>
-            <p className="text-4xl sm:text-6xl xl:w-3/5">
+            <p className="text-4xl sm:text-6xl xl:w-3/5 break-words">
               Here you can learn more about me
             </p>
           </div>
