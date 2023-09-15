@@ -33,7 +33,7 @@ const Navbar: FC<NavbarProps> = ({}) => {
       animate="enter"
       exit="exit"
     >
-      <div className="p-14  sm:p-20 box-border h-full w-full flex flex-col justify-between">
+      <div className="p-10 sm:p-20 box-border h-full w-full flex flex-col justify-between">
         <div className="flex flex-col text-6xl gap-3 mt-20">
           {navItems.map((item, i) => {
             return (

@@ -12,9 +12,10 @@ interface ModalProps {
     color: string;
   }[];
   modal: { active: boolean; index: number };
+  className?: string;
 }
 
-const Modal: FC<ModalProps> = ({ projects, modal }) => {
+const Modal: FC<ModalProps> = ({ projects, modal, className }) => {
   const containerRef = useRef(null);
   const cursorRef = useRef(null);
   const cursorLabelRef = useRef(null);
@@ -64,7 +65,7 @@ const Modal: FC<ModalProps> = ({ projects, modal }) => {
         variants={scaleAnimation}
         animate={active ? 'open' : 'closed'}
         initial="initial"
-        className="pointer-events-none h-[350px] w-[400px] flex items-center justify-center absolute overflow-hidden"
+        className={`${className} pointer-events-none h-[350px] w-[400px] flex items-center justify-center absolute overflow-hidden`}
       >
         <div
           style={{ top: index * -100 + '%' }}

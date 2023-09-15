@@ -15,7 +15,7 @@ const Description: FC<DescriptionProps> = ({}) => {
   const phrase =
     'I AM CURRENTLY PART OF THE DESIGN TEAM AT SOPRA STERIA IN MADRID, AND I HAVE HAD THE OPPORTUNITY TO HELP CREATE DIGITAL EXPERIENCES AND SOLUTIONS FOR BIG BRANDS FOR THE LAST 20 YEARS OF MY LIFE. I CONSIDER MYSELF PASSIONATE ABOUT TECHNOLOGY, WORKING AT THE INTERSECTION BETWEEN BRANDING AND DIGITAL PRODUCT DESIGN.';
   return (
-    <div className="pt-48 px-8 flex justify-center rounded-t-[4rem] bg-[#f4f4f4] pb-20">
+    <div className="overflow-hidden pt-48 px-8 flex justify-center rounded-t-[4rem] bg-[#f4f4f4] pb-20">
       <div className="flex  items-center  flex-col w-[40rem] relative gap-12  text-center">
         <Magnetic>
           <div
