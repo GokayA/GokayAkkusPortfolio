@@ -31,8 +31,8 @@ const Contact = () => {
             <div className="pt-10">
               <h1 className="text-xl text-gray-400 ">Socials</h1>
               <p className="font-bold text-xl text-white">LinkedIn</p>
-              <p className="font-bold text-xl text-white">LinkedIn</p>
-              <p className="font-bold text-xl text-white">LinkedIn</p>
+              <p className="font-bold text-xl text-white">GitHub</p>
+              <p className="font-bold text-xl text-white">Discord</p>
             </div>
           </div>
           <div className="Right">
