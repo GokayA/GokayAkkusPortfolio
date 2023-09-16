@@ -56,7 +56,7 @@ const Projects: FC<ProjectsProps> = ({}) => {
             return (
               <>
                 <Project
-                  key={index}
+                  key={project.title}
                   index={index}
                   title={project.title}
                   setModal={setModal}
