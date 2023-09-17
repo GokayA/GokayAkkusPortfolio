@@ -36,14 +36,13 @@ const Projects: FC<ProjectsProps> = ({}) => {
       <div className="sm:flex hidden w-[1000px]  items-center justify-center flex-col">
         {projects.map((project, index) => {
           return (
-            <>
+          
               <Project
                 key={index}
                 index={index}
                 title={project.title}
                 setModal={setModal}
               />
-            </>
           );
         })}
       </div>
@@ -54,9 +53,8 @@ const Projects: FC<ProjectsProps> = ({}) => {
         <div className="sm:hidden h-full w-full flex flex-col">
           {projects.map((project, index) => {
             return (
-              <>
+            <div key={index}>
                 <Project
-                  key={project.title}
                   index={index}
                   title={project.title}
                   setModal={setModal}
@@ -72,7 +70,7 @@ const Projects: FC<ProjectsProps> = ({}) => {
                     className="h-auto"
                   />
                 </div>
-              </>
+              </div>
             );
           })}
         </div>
