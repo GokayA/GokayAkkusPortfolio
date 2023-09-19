@@ -56,7 +56,7 @@ export const descriptionOpacity = {
 
 export const scaleAnimation = {
   initial: { scale: 0, x: '-50%', y: '-50%' },
-  open: {
+  enter: {
     scale: 1,
     x: '-50%',
     y: '-50%',

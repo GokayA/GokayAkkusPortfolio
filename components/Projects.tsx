@@ -1,4 +1,3 @@
-import { motion, useScroll, useTransform } from 'framer-motion';
 import Image from 'next/image';
 import { FC, useState } from 'react';
 import Modal from './Modal';
@@ -8,23 +7,24 @@ interface ProjectsProps {}
 
 const projects = [
   {
-    title: 'Project1',
-    src: '/place.png',
-    color: 'bg-red-500',
+    title: 'Daily Good Product',
+    src: '/images/dailygood.png',
+    color: 'bg-neutral-400',
+    href: 'https://www.google.com',
   },
   {
-    title: 'Project2',
-    src: '/place.png',
-    color: 'bg-yellow-500',
+    title: 'Spotify Clone',
+    src: '/images/spotify.png',
+    color: 'bg-green-800',
   },
   {
     title: 'Project3',
-    src: '/place.png',
+    src: '/images/oldport.png',
     color: 'bg-purple-500',
   },
   {
-    title: 'Project4',
-    src: '/place.png',
+    title: 'Old Portfolio Site',
+    src: '/images/oldport.png',
     color: 'bg-black',
   },
 ];
@@ -36,24 +36,20 @@ const Projects: FC<ProjectsProps> = ({}) => {
       <div className="sm:flex hidden w-[1000px]  items-center justify-center flex-col">
         {projects.map((project, index) => {
           return (
-          
-              <Project
-                key={index}
-                index={index}
-                title={project.title}
-                setModal={setModal}
-              />
+            <Project
+              key={index}
+              index={index}
+              title={project.title}
+              setModal={setModal}
+            />
           );
         })}
       </div>
-      <motion.div
-        initial="initial"
-        className="pointer-events-none w-[400px]  flex items-center justify-center  overflow-hidden"
-      >
+      <div className="pointer-events-none w-[400px]  flex items-center justify-center  overflow-hidden">
         <div className="sm:hidden h-full w-full flex flex-col">
           {projects.map((project, index) => {
             return (
-            <div key={index}>
+              <div key={index}>
                 <Project
                   index={index}
                   title={project.title}
@@ -74,7 +70,7 @@ const Projects: FC<ProjectsProps> = ({}) => {
             );
           })}
         </div>
-      </motion.div>
+      </div>
       <Modal modal={modal} projects={projects} />
     </div>
   );
