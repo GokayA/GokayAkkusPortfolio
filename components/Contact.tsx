@@ -1,6 +1,7 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
 import Magnetic from './Magnetic';
+import Link from 'next/link';
 
 const Contact = () => {
   const contactRef = useRef(null);
@@ -30,9 +31,21 @@ const Contact = () => {
             </p>
             <div className="pt-10">
               <h1 className="text-xl text-gray-400 ">Socials</h1>
-              <p className="font-bold text-xl text-white">LinkedIn</p>
-              <p className="font-bold text-xl text-white">GitHub</p>
-              <p className="font-bold text-xl text-white">Discord</p>
+              <Link
+                href="https://www.linkedin.com/in/gokay-akkus"
+                className="font-bold text-xl text-white"
+              >
+                LinkedIn
+              </Link>
+              <Link
+                href="https://github.com/GokayA"
+                className="font-bold text-xl text-white"
+              >
+                GitHub
+              </Link>
+              <Link href="#" className="font-bold text-xl text-white">
+                Discord
+              </Link>
             </div>
           </div>
           <div className="Right">
