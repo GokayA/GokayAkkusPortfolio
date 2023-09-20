@@ -23,42 +23,39 @@ const Modal: FC<ModalProps> = ({ projects, modal, className }) => {
   const { active, index } = modal;
 
   useEffect(() => {
-    const ctx = gsap.context((self) => {
-      const moveContainerX = gsap.quickTo(containerRef.current, 'left', {
-        duration: 0.8,
-        ease: 'power3',
-      });
-      const moveContainerY = gsap.quickTo(containerRef.current, 'top', {
-        duration: 0.8,
-        ease: 'power3',
-      });
-      const moveCursorX = gsap.quickTo(cursorRef.current, 'left', {
-        duration: 0.5,
-        ease: 'power3',
-      });
-      const moveCursorY = gsap.quickTo(cursorRef.current, 'top', {
-        duration: 0.5,
-        ease: 'power3',
-      });
-      const moveCursorLabelX = gsap.quickTo(cursorLabelRef.current, 'left', {
-        duration: 0.45,
-        ease: 'power3',
-      });
-      const moveCursorLabelY = gsap.quickTo(cursorLabelRef.current, 'top', {
-        duration: 0.45,
-        ease: 'power3',
-      });
-      window.addEventListener('mousemove', (e) => {
-        const { pageX, pageY } = e;
-        moveContainerX(pageX);
-        moveContainerY(pageY);
-        moveCursorX(pageX);
-        moveCursorY(pageY);
-        moveCursorLabelX(pageX);
-        moveCursorLabelY(pageY);
-      });
-    }, containerRef);
-    return () => ctx.revert();
+    const moveContainerX = gsap.quickTo(containerRef.current, 'left', {
+      duration: 0.8,
+      ease: 'power3',
+    });
+    const moveContainerY = gsap.quickTo(containerRef.current, 'top', {
+      duration: 0.8,
+      ease: 'power3',
+    });
+    const moveCursorX = gsap.quickTo(cursorRef.current, 'left', {
+      duration: 0.5,
+      ease: 'power3',
+    });
+    const moveCursorY = gsap.quickTo(cursorRef.current, 'top', {
+      duration: 0.5,
+      ease: 'power3',
+    });
+    const moveCursorLabelX = gsap.quickTo(cursorLabelRef.current, 'left', {
+      duration: 0.45,
+      ease: 'power3',
+    });
+    const moveCursorLabelY = gsap.quickTo(cursorLabelRef.current, 'top', {
+      duration: 0.45,
+      ease: 'power3',
+    });
+    window.addEventListener('mousemove', (e) => {
+      const { pageX, pageY } = e;
+      moveContainerX(pageX);
+      moveContainerY(pageY);
+      moveCursorX(pageX);
+      moveCursorY(pageY);
+      moveCursorLabelX(pageX);
+      moveCursorLabelY(pageY);
+    });
   }, []);
 
   return (

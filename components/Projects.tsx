@@ -45,7 +45,7 @@ const Projects: FC<ProjectsProps> = ({}) => {
           );
         })}
       </div>
-      <div className="pointer-events-none w-[400px]  flex items-center justify-center  overflow-hidden">
+      <div className=" w-[400px]  flex items-center justify-center  overflow-hidden">
         <div className="sm:hidden h-full w-full flex flex-col">
           {projects.map((project, index) => {
             return (
