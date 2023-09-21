@@ -65,7 +65,7 @@ const Modal: FC<ModalProps> = ({ projects, modal, className }) => {
         variants={scaleAnimation}
         animate={active ? 'enter' : 'closed'}
         initial="initial"
-        className={`${className} pointer-events-none  h-[350px] w-[400px] flex items-center justify-center absolute overflow-hidden`}
+        className={`${className} z-20 pointer-events-none h-[350px] w-[400px] flex items-center justify-center absolute overflow-hidden`}
       >
         <div
           style={{ top: index * -100 + '%' }}
@@ -94,13 +94,13 @@ const Modal: FC<ModalProps> = ({ projects, modal, className }) => {
         animate={active ? 'enter' : 'closed'}
         initial="initial"
         ref={cursorRef}
-        className="w-20 h-20 bg-yellow-500 absolute pointer-events-none flex items-center justify-center rounded-full text-white"
+        className="w-20 h-20 z-50 bg-yellow-500 absolute pointer-events-none flex items-center justify-center rounded-full text-white"
       ></motion.div>
       <motion.div
         variants={scaleAnimation}
         animate={active ? 'enter' : 'closed'}
         initial="initial"
-        className="flex w-20 h-20 bg-transparent absolute pointer-events-none justify-center items-center rounded-full text-white"
+        className="flex w-20 z-50 h-20 bg-transparent absolute pointer-events-none   justify-center items-center rounded-full text-white"
         ref={cursorLabelRef}
       >
         View

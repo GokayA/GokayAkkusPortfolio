@@ -1,15 +1,13 @@
 'use client';
 import { motion, useInView } from 'framer-motion';
-import { FC, useRef } from 'react';
+import { useRef } from 'react';
 import Magnetic from './Magnetic';
 import {
   descriptionOpacity,
   descriptionSlideUp,
 } from './transitions/transitions';
 
-interface DescriptionProps {}
-
-const Description: FC<DescriptionProps> = ({}) => {
+const Description = () => {
   const containerRef = useRef(null);
   const isInView = useInView(containerRef);
   const phrase =

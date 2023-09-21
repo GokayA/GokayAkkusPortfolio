@@ -1,35 +1,36 @@
 import Image from 'next/image';
-import { FC, useState } from 'react';
+import { useState } from 'react';
 import Modal from './Modal';
 import Project from './Project';
-
-interface ProjectsProps {}
 
 const projects = [
   {
     title: 'Daily Good Product',
     src: '/images/dailygood.png',
     color: 'bg-neutral-400',
-    href: 'https://www.google.com',
+    href: 'https://dailygoodproduct.vercel.app/',
   },
   {
     title: 'Spotify Clone',
     src: '/images/spotify.png',
     color: 'bg-green-800',
+    href: 'https://spotify-clone-xi-blush.vercel.app/',
   },
   {
-    title: 'Project3',
-    src: '/images/oldport.png',
+    title: 'Food Recipe Project',
+    src: '/images/recipe.png',
     color: 'bg-purple-500',
+    href: 'https://recipe-project-omega.vercel.app/',
   },
   {
     title: 'Old Portfolio Site',
     src: '/images/oldport.png',
     color: 'bg-black',
+    href: 'https://gokayakkus.vercel.app/',
   },
 ];
 
-const Projects: FC<ProjectsProps> = ({}) => {
+const Projects = () => {
   const [modal, setModal] = useState({ active: false, index: 0 });
   return (
     <div className=" flex overflow-hidden pt-48 placeholder:b-12 items-center  justify-center border-t-4 h-full bg-[#f4f4f4]">
@@ -41,6 +42,7 @@ const Projects: FC<ProjectsProps> = ({}) => {
               index={index}
               title={project.title}
               setModal={setModal}
+              href={project.href}
             />
           );
         })}
@@ -53,6 +55,7 @@ const Projects: FC<ProjectsProps> = ({}) => {
                 <Project
                   index={index}
                   title={project.title}
+                  href={project.href}
                   setModal={setModal}
                 />
                 <div

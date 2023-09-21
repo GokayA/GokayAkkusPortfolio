@@ -3,13 +3,10 @@ import { AnimatePresence } from 'framer-motion';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Menu, X } from 'lucide-react';
-import { FC, useLayoutEffect, useRef, useState } from 'react';
-import Magnetic from './Magnetic';
+import { useLayoutEffect, useRef, useState } from 'react';
 import Navbar from './Navbar';
 
-interface HeaderProps {}
-
-const Header: FC<HeaderProps> = ({}) => {
+const Header = () => {
   const burgerRef = useRef(null);
 
   const [isActive, setIsActive] = useState<boolean>(false);
@@ -70,12 +67,8 @@ const Header: FC<HeaderProps> = ({}) => {
         onClick={() => setIsActive(!isActive)}
         className="z-40 scale-0 fixed right-0 m-5 w-20 h-20"
       >
-        <div className="relative before:transition before:duration-[0.5s] after:transition after:duration-[05.s] w-full before:block after-w-[40%] before:relative before:top-0 before-w-[40%] after:block">
-          {isActive ? (
-            <X className="text-red-500 " />
-          ) : (
-            <Menu className="text-red-500 " />
-          )}
+        <div className="relative text-[#4A55A2] pt-10 ">
+          {isActive ? <X size={40} /> : <Menu size={40} />}
         </div>
       </div>
       <AnimatePresence mode="wait"> {isActive && <Navbar />}</AnimatePresence>

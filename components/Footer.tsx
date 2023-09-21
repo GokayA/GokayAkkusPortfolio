@@ -1,14 +1,22 @@
-import { FC } from 'react';
+import Link from 'next/link';
 
-interface FooterProps {}
-
-const Footer: FC<FooterProps> = ({}) => {
+const Footer = () => {
   return (
     <div className="overflow-hidden flex gap-10 justify-between text-sm w-full">
-      <p>Instagram</p>
-      <p>Twitter</p>
-      <p>LinkedIn</p>
-      <p>Github</p>
+      <Link
+        target="_blank"
+        href="https://www.linkedin.com/in/gokay-akkus"
+        className="text-lg font-thin hover:text-2xl"
+      >
+        LinkedIn
+      </Link>
+      <Link
+        target="_blank"
+        href="https://github.com/GokayA"
+        className="text-lg font-thin hover:text-2xl"
+      >
+        Github
+      </Link>
     </div>
   );
 };

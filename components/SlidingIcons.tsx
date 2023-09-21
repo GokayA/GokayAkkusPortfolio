@@ -1,7 +1,6 @@
 'use client';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import Image from 'next/image';
-import { FC, useRef } from 'react';
+import { useRef } from 'react';
 import {
   BiLogoHtml5,
   BiLogoJavascript,
@@ -12,8 +11,6 @@ import {
   BiSolidFileCss,
 } from 'react-icons/bi';
 import { TbBrandNextjs } from 'react-icons/tb';
-
-interface SlidingImagesProps {}
 
 const slider1 = [
   {
@@ -53,7 +50,7 @@ const slider2 = [
   },
 ];
 
-const SlidingIcons: FC<SlidingImagesProps> = ({}) => {
+const SlidingIcons = () => {
   const containerRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: containerRef,

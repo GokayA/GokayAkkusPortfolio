@@ -1,12 +1,9 @@
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { FC } from 'react';
 import Footer from './Footer';
 import { navbarMenuSlide, navbarSlide } from './transitions/transitions';
 
-interface NavbarProps {}
-
-const Navbar: FC<NavbarProps> = ({}) => {
+const Navbar = ({}) => {
   const navItems = [
     {
       title: 'Home',

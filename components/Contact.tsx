@@ -9,8 +9,8 @@ const Contact = () => {
     target: contactRef,
     offset: ['start end', 'end end'],
   });
+
   const x = useTransform(scrollYProgress, [0, 1], [100, 0]);
-  const rotate = useTransform(scrollYProgress, [0, 1], [120, 90]);
   const y = useTransform(scrollYProgress, [0, 1], [-500, 0]);
 
   return (
@@ -29,22 +29,21 @@ const Contact = () => {
             <p className="font-bold text-xl text-white">
               ggokay.akkus@gmail.com
             </p>
-            <div className="pt-10">
-              <h1 className="text-xl text-gray-400 ">Socials</h1>
+            <div className="pt-10 flex gap-2 flex-col">
+              <h1 className="text-xl text-gray-400  ">Socials</h1>
               <Link
+                target="_blank"
                 href="https://www.linkedin.com/in/gokay-akkus"
-                className="font-bold text-xl text-white"
+                className="font-bold text-xl text-white hover:text-2xl"
               >
                 LinkedIn
               </Link>
               <Link
+                target="_blank"
                 href="https://github.com/GokayA"
-                className="font-bold text-xl text-white"
+                className="font-bold text-xl text-white hover:text-2xl"
               >
                 GitHub
-              </Link>
-              <Link href="#" className="font-bold text-xl text-white">
-                Discord
               </Link>
             </div>
           </div>
