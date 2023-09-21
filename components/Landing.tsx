@@ -1,5 +1,8 @@
+'use client';
 import { Mouse, Shell } from 'lucide-react';
+import { motion } from 'framer-motion';
 import Link from 'next/link';
+import { landingAnimation } from './transitions/transitions';
 
 const Landing = () => {
   return (
@@ -11,19 +14,32 @@ const Landing = () => {
           <h1 className="text-8xl sm:text-9xl ">Akkus</h1>
         </div>
         <div className="flex lg:flex-row flex-col sm:gap-40 gap-20 pb-32">
-          <div>
+          <motion.div
+            variants={landingAnimation}
+            initial="initial"
+            animate="enter"
+            exit="exit"
+          >
             <h1 className="text-4xl md:text-6xl pt-20 sm:pt-0">
               Web Developer
             </h1>
-          </div>
+          </motion.div>
           <div className="flex flex-col justify-center items-center">
-            <p className="text-4xl sm:text-6xl xl:w-3/5 break-words flex ">
+            <motion.p
+              variants={landingAnimation}
+              initial="initial"
+              animate="enter"
+              exit="exit"
+              className="text-4xl sm:text-6xl xl:w-3/5 break-words flex "
+            >
               <Shell size={60} /> Learn more about me
+            </motion.p>
+            <p>
+              <Mouse
+                className="animate-bounce pt-4 absolute bottom-5 text-center left-0 right-0 m-auto  "
+                size={60}
+              />
             </p>
-            <Mouse
-              className="animate-bounce pt-4 absolute bottom-5 text-center left-0 right-0 m-auto  "
-              size={60}
-            />
           </div>
         </div>
       </div>

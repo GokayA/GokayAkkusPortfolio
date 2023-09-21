@@ -61,11 +61,11 @@ const Header = () => {
     });
   }, []);
   return (
-    <div className="overflow-hidden flex justify-end p-10 w-full font-light absolute z-10 top-0 text-white  items-center">
+    <div className="overflow-hidden  flex justify-end p-10 w-full font-light absolute z-10 top-0 text-white  items-center">
       <div
         ref={burgerRef}
         onClick={() => setIsActive(!isActive)}
-        className="z-40 scale-0 fixed right-0 m-5 w-20 h-20"
+        className="z-40 scale-0 fixed  m-5 w-20 h-20"
       >
         <div className="relative text-[#4A55A2] pt-10 ">
           {isActive ? <X size={40} /> : <Menu size={40} />}
