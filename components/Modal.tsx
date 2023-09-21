@@ -94,16 +94,16 @@ const Modal: FC<ModalProps> = ({ projects, modal, className }) => {
         animate={active ? 'enter' : 'closed'}
         initial="initial"
         ref={cursorRef}
-        className="w-20 h-20 z-50 bg-yellow-500 absolute pointer-events-none flex items-center justify-center rounded-full text-white"
+        className="w-20 h-20 z-50 bg-zinc-300 absolute pointer-events-none flex items-center justify-center rounded-full text-white"
       ></motion.div>
       <motion.div
         variants={scaleAnimation}
         animate={active ? 'enter' : 'closed'}
         initial="initial"
-        className="flex w-20 z-50 h-20 bg-transparent absolute pointer-events-none   justify-center items-center rounded-full text-white"
+        className="flex w-20 z-50 text-[#141516] font-bold h-20 bg-transparent absolute pointer-events-none   justify-center items-center rounded-full "
         ref={cursorLabelRef}
       >
-        View
+        live
       </motion.div>
     </>
   );
