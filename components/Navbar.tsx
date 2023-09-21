@@ -7,19 +7,19 @@ const Navbar = ({}) => {
   const navItems = [
     {
       title: 'Home',
-      href: '/',
-    },
-    {
-      title: 'Projects',
-      href: '/projects',
+      href: '#',
     },
     {
       title: 'About',
-      href: '/about',
+      href: '#about',
+    },
+    {
+      title: 'Projects',
+      href: '#projects',
     },
     {
       title: 'Contact',
-      href: '/contact',
+      href: '#contact',
     },
   ];
   return (
@@ -41,9 +41,12 @@ const Navbar = ({}) => {
                 exit="exit"
                 initial="initial"
                 key={i}
-                className="relative flex items-center"
+                className="relative flex items-center "
               >
-                <Link href={item.href}>{item.title}</Link>
+                <div className="relative flex items-center group">
+                  <Link href={item.href}>{item.title}</Link>
+                  <div className="w-3 h-3 rounded-full absolute top-1/2 -left-4 bg-white transform -translate-y-1/2 opacity-0 transition-opacity duration-200 group-hover:opacity-100 group-hover:transition-all group-hover:duration-500 "></div>
+                </div>
               </motion.div>
             );
           })}

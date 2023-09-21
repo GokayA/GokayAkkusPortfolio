@@ -22,13 +22,16 @@ const Contact = () => {
       <div className="pt-80 sm:pt-52 sm:h-[80vh] w-full Top h-full text-6xl font-thin text-white">
         Contacts
       </div>
-      <div className="Bottom pb-10">
+      <div className="Bottom pb-10" id="contact">
         <div className="flex md:flex-row flex-col-reverse gap-2 sm:gap-10">
           <div className="left">
             <h1 className="text-xl text-gray-400 ">Send me a message</h1>
-            <p className="font-bold text-xl text-white">
+            <a
+              href="mailto:ggokay.akkus@gmail.com"
+              className="font-bold text-xl text-white"
+            >
               ggokay.akkus@gmail.com
-            </p>
+            </a>
             <div className="pt-10 flex gap-2 flex-col">
               <h1 className="text-xl text-gray-400  ">Socials</h1>
               <Link

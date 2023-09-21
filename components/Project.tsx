@@ -15,7 +15,7 @@ interface ProjectProps {
 
 const Project: FC<ProjectProps> = ({ setModal, title, index, href }) => {
   return (
-    <Link href={href} target="_blank" className="w-full h-full">
+    <Link id="projects" href={href} target="_blank" className="w-full h-full">
       <div
         onMouseOver={() => setModal({ active: true, index: index })}
         onMouseOutCapture={() => setModal({ active: false, index: index })}

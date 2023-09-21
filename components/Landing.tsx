@@ -1,4 +1,5 @@
 import { Mouse, Shell } from 'lucide-react';
+import Link from 'next/link';
 
 const Landing = () => {
   return (
@@ -28,10 +29,14 @@ const Landing = () => {
       </div>
       <div className="hidden sm:flex gap-4">
         <div className="rounded-full bg-zinc-800 text-white w-24 h-14 flex justify-center items-center">
-          <p className="text-lg font-semibold">Projects</p>
+          <Link href="#projects" className="text-lg font-semibold">
+            Projects
+          </Link>
         </div>
         <div className="rounded-full bg-zinc-800 text-white w-24 h-14 flex justify-center items-center">
-          <p className="text-lg font-semibold">Contact</p>
+          <Link href="#contact" className="text-lg font-semibold">
+            Contact
+          </Link>
         </div>
       </div>
     </div>
