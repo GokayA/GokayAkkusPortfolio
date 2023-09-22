@@ -2,6 +2,7 @@
 import Contact from '@/components/Contact';
 import Description from '@/components/Description';
 import Landing from '@/components/Landing';
+import Layers from '@/components/Layers';
 import Projects from '@/components/Projects';
 import SlidingIcons from '@/components/SlidingIcons';
 import { useEffect, useState } from 'react';
@@ -20,8 +21,9 @@ export default function Home() {
   }, []);
   return (
     <main className="bg-[#141516]">
-      <Landing />
-      <Description />
+      <Layers />
+      {/* <Landing />
+      <Description /> */}
       <Projects />
       <SlidingIcons />
       <Contact />

@@ -11,11 +11,12 @@ const Description = () => {
   const containerRef = useRef(null);
   const isInView = useInView(containerRef);
   const phrase =
-    'I AM CURRENTLY PART OF THE DESIGN TEAM AT SOPRA STERIA IN MADRID, AND I HAVE HAD THE OPPORTUNITY TO HELP CREATE DIGITAL EXPERIENCES AND SOLUTIONS FOR BIG BRANDS FOR THE LAST 20 YEARS OF MY LIFE. I CONSIDER MYSELF PASSIONATE ABOUT TECHNOLOGY, WORKING AT THE INTERSECTION BETWEEN BRANDING AND DIGITAL PRODUCT DESIGN.';
+    "I'm a web developer with a strong understanding of design principles and user experience.";
+
   return (
     <div
       id="about"
-      className=" overflow-hidden pt-48 px-8 flex justify-center rounded-t-[4rem] bg-[#f4f4f4] pb-20"
+      className="overflow-hidden pt-48 px-8 flex justify-center rounded-t-[4rem] bg-[#f4f4f4] pb-20"
     >
       <div className="flex  items-center  flex-col w-[40rem] relative gap-12  text-center">
         <Magnetic>
@@ -27,7 +28,7 @@ const Description = () => {
             About Me
           </div>
         </Magnetic>
-        <p className="m-0">
+        <p className="m-0 uppercase ">
           {phrase.split(' ').map((word, index) => {
             return (
               <span
@@ -40,7 +41,7 @@ const Description = () => {
                   variants={descriptionSlideUp}
                   initial="initial"
                   animate={isInView ? 'open' : 'closed'}
-                  className="text-lg w-[80%] font-semibold leading-6"
+                  className="text-2xl w-[80%] font-semibold leading-6"
                 >
                   {word}
                 </motion.span>
@@ -52,13 +53,13 @@ const Description = () => {
           variants={descriptionOpacity}
           initial="initial"
           animate={isInView ? 'open' : 'closed'}
-          className="font-semibold leading-6"
+          className="font-semibold text-2xl leading-6 uppercase"
         >
-          NOW, I WORK HAND IN HAND WITH BBVA DESIGN AND USER EXPERIENCE TEAM
-          HELPING TO IMPROVE THEIR DIGITAL PRODUCTS BY BALANCING BUSINESS
-          PRIORITIES WITH THOSE OF THE THOUSANDS OF USERS WHO USE THEIR
-          SERVICES. FROM THE EARLY STAGES OF DEFINITION AND IDEATION, TO THE
-          REVIEW OF INTERACTION FLOWS AND USER TESTING.
+          I consider my self passionate about technology. I like researching and
+          learning about new technologies also I am using them into my projects
+          to improve my skills. Nowadays, I am working on my latest project
+          which is building an e-commerce website that will help me learn new
+          skills.
         </motion.p>
       </div>
     </div>
