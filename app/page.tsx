@@ -22,8 +22,6 @@ export default function Home() {
   return (
     <main className="bg-[#141516]">
       <Layers />
-      {/* <Landing />
-      <Description /> */}
       <Projects />
       <SlidingIcons />
       <Contact />
