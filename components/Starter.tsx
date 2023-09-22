@@ -5,7 +5,7 @@ import TransitionContext from './transitions/TransitionContext';
 import Description from './Description';
 import Landing from './Landing';
 
-const Layers = () => {
+const Starter = () => {
   const main = useRef(null);
   const scrollTween = useRef<gsap.TweenTarget>();
   const [ctx] = useState(gsap.context(() => {}, main));
@@ -63,4 +63,4 @@ const Layers = () => {
   );
 };
 
-export default Layers;
+export default Starter;
