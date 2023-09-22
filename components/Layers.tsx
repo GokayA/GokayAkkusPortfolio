@@ -12,8 +12,6 @@ export default function Layers() {
   const { completed } = useContext(TransitionContext);
 
   const goToSection = (i: number) => {
-    // Remove the GSAP instance with the specific ID
-    // to prevent memory leak
     ctx.data.forEach((e: gsap.TweenVars) => {
       if (e.vars && e.vars.id === 'scrollTween') {
         e.kill();
@@ -50,6 +48,7 @@ export default function Layers() {
       });
     });
     return () => ctx.revert();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [completed]);
 
   return (
