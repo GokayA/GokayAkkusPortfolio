@@ -10,7 +10,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 My portfolio website shows my skills and projects.
 
-![image](/public/portfolio.png)
+![image](/public/images/portfolio.png)
 
 ## Technologies Used
 
