@@ -41,7 +41,7 @@ const Description = () => {
                   variants={descriptionSlideUp}
                   initial="initial"
                   animate={isInView ? 'open' : 'closed'}
-                  className="text-2xl w-[80%] font-semibold leading-6"
+                  className="text-2xl w-[80%] font-semibold leading-7 "
                 >
                   {word}
                 </motion.span>
@@ -53,11 +53,13 @@ const Description = () => {
           variants={descriptionOpacity}
           initial="initial"
           animate={isInView ? 'open' : 'closed'}
-          className="font-semibold text-2xl leading-6 uppercase"
+          className="font-semibold text-2xl leading-7 uppercase"
         >
-          I consider my self passionate about technology. I like researching and
-          learning about new technologies also I am using them into my projects
-          to improve my skills. Nowadays, I am working on my latest project
+          I consider my self passionate about{' '}
+          <span className="text-red-800">technology</span>. I like researching
+          and learning about new technologies also I am using them into my
+          projects to improve my skills. Nowadays, I am
+          <span className="text-red-800"> working on </span>my latest project
           which is building an e-commerce website that will help me learn new
           skills.
         </motion.p>

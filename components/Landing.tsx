@@ -1,10 +1,13 @@
 'use client';
 import { Mouse, Shell } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { motion, useInView } from 'framer-motion';
 import Link from 'next/link';
-import { landingAnimation } from './transitions/transitions';
+import { landingAnimation, landingButtons } from './transitions/transitions';
+import { useRef } from 'react';
 
 const Landing = () => {
+  const containerRef = useRef(null);
+  const isInView = useInView(containerRef);
   return (
     <div className="flex relative h-[100vh] overflow-hidden text-white  justify-between p-4 sm:p-20 ">
       <div className="flex flex-col justify-between">
@@ -12,12 +15,14 @@ const Landing = () => {
           <h1 className="text-8xl sm:text-9xl ">I&apos;m Gokay</h1>
           <h1 className="text-8xl sm:text-9xl ">Akkus</h1>
         </div>
-        <div className="flex lg:flex-row flex-col sm:gap-40 gap-20 pb-32">
+        <div
+          ref={containerRef}
+          className="flex lg:flex-row flex-col sm:gap-40 gap-20 pb-32"
+        >
           <motion.div
             variants={landingAnimation}
             initial="initial"
-            animate="enter"
-            exit="exit"
+            animate={isInView ? 'enter' : 'exit'}
           >
             <h1 className="text-4xl md:text-6xl pt-20 sm:pt-0">
               Web Developer
@@ -27,8 +32,7 @@ const Landing = () => {
             <motion.p
               variants={landingAnimation}
               initial="initial"
-              animate="enter"
-              exit="exit"
+              animate={isInView ? 'enter' : 'exit'}
               className="text-4xl sm:text-6xl xl:w-3/5 break-words flex "
             >
               <Shell size={60} /> Learn more about me
@@ -43,16 +47,26 @@ const Landing = () => {
         </div>
       </div>
       <div className="hidden sm:flex gap-4">
-        <div className="rounded-full bg-zinc-800 text-white w-24 h-14 flex justify-center items-center">
+        <motion.div
+          variants={landingButtons}
+          initial="initial"
+          animate={isInView ? 'enter' : 'exit'}
+          className="rounded-full bg-zinc-800 text-white w-24 h-14 flex justify-center items-center"
+        >
           <Link href="#projects" className="text-lg font-semibold">
             Projects
           </Link>
-        </div>
-        <div className="rounded-full bg-zinc-800 text-white w-24 h-14 flex justify-center items-center">
+        </motion.div>
+        <motion.div
+          variants={landingButtons}
+          initial="initial"
+          animate={isInView ? 'enter' : 'exit'}
+          className="rounded-full bg-zinc-800 text-white w-24 h-14 flex justify-center items-center"
+        >
           <Link href="#contact" className="text-lg font-semibold">
             Contact
           </Link>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

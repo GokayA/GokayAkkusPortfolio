@@ -26,28 +26,34 @@ const Contact = () => {
         <div className="flex md:flex-row flex-col-reverse gap-2 sm:gap-10">
           <div className="left">
             <h1 className="text-xl text-gray-400 ">Send me a message</h1>
-            <a
-              href="mailto:ggokay.akkus@gmail.com"
-              className="font-bold text-xl text-white"
-            >
-              ggokay.akkus@gmail.com
-            </a>
+            <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+              <a
+                href="mailto:ggokay.akkus@gmail.com"
+                className="font-bold text-xl text-white"
+              >
+                ggokay.akkus@gmail.com
+              </a>
+            </motion.div>
             <div className="pt-10 flex gap-2 flex-col">
               <h1 className="text-xl text-gray-400  ">Socials</h1>
-              <Link
-                target="_blank"
-                href="https://www.linkedin.com/in/gokay-akkus"
-                className="font-bold text-xl text-white hover:text-2xl"
-              >
-                LinkedIn
-              </Link>
-              <Link
-                target="_blank"
-                href="https://github.com/GokayA"
-                className="font-bold text-xl text-white hover:text-2xl"
-              >
-                GitHub
-              </Link>
+              <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+                <Link
+                  target="_blank"
+                  href="https://www.linkedin.com/in/gokay-akkus"
+                  className="font-bold text-xl text-white"
+                >
+                  LinkedIn
+                </Link>
+              </motion.div>
+              <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+                <Link
+                  target="_blank"
+                  href="https://github.com/GokayA"
+                  className="font-bold text-xl text-white"
+                >
+                  GitHub
+                </Link>
+              </motion.div>
             </div>
           </div>
           <div className="Right">
