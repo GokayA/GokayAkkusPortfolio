@@ -17,7 +17,7 @@ const Contact = () => {
     <motion.div
       style={{ y }}
       ref={contactRef}
-      className="overflow-hidden relative z-0 flex flex-col h-full justify-between px-20 w-full   items-start content-start bg-[#141516] "
+      className="overflow-hidden relative z-0 flex flex-col h-full justify-between px-20 w-full   items-start content-start bg-[#141516]"
     >
       <div className="pt-80 sm:pt-52 sm:h-[80vh] w-full Top h-full text-6xl font-thin text-white">
         Contacts
