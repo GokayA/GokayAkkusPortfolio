@@ -47,26 +47,26 @@ const Landing = () => {
         </div>
       </div>
       <div className="hidden sm:flex gap-4">
-        <motion.div
-          variants={landingButtons}
-          initial="initial"
-          animate={isInView ? 'enter' : 'exit'}
-          className="rounded-full bg-zinc-800 text-white w-24 h-14 flex justify-center items-center"
-        >
-          <Link href="#projects" className="text-lg font-semibold">
+        <Link href="#projects" className="text-lg font-semibold">
+          <motion.div
+            variants={landingButtons}
+            initial="initial"
+            animate={isInView ? 'enter' : 'exit'}
+            className="rounded-full bg-zinc-800 text-white w-24 h-14 flex justify-center items-center hover:bg-[#4A55A2] transition-all duration-500"
+          >
             Projects
-          </Link>
-        </motion.div>
-        <motion.div
-          variants={landingButtons}
-          initial="initial"
-          animate={isInView ? 'enter' : 'exit'}
-          className="rounded-full bg-zinc-800 text-white w-24 h-14 flex justify-center items-center"
-        >
-          <Link href="#contact" className="text-lg font-semibold">
+          </motion.div>
+        </Link>
+        <Link href="#contact" className="text-lg font-semibold ">
+          <motion.div
+            variants={landingButtons}
+            initial="initial"
+            animate={isInView ? 'enter' : 'exit'}
+            className="rounded-full bg-zinc-800 text-white w-24 h-14 flex justify-center items-center hover:bg-[#4A55A2] transition-all duration-500"
+          >
             Contact
-          </Link>
-        </motion.div>
+          </motion.div>
+        </Link>
       </div>
     </div>
   );

@@ -77,7 +77,7 @@ export const landingAnimation = {
     x: '0',
     y: '0',
     ease: 'linear',
-    transition: { duration: 0.5, delay: 0.6 },
+    transition: { duration: 0.5, delay: 0.8 },
   },
   exit: {
     opacity: 0,
@@ -86,17 +86,15 @@ export const landingAnimation = {
 };
 
 export const landingButtons = {
-  initial: { opacity: 0, x: '-50%', y: '0' },
+  initial: { opacity: 0, y: '-250%' },
   enter: {
     opacity: 1,
-
-    x: '0',
     y: '0',
     ease: 'linear',
     transition: { duration: 0.5 },
   },
   exit: {
     opacity: 0,
-    x: '-50%',
+    x: '-250%',
   },
 };
