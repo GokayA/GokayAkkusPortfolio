@@ -25,8 +25,8 @@ const projects = [
   {
     title: 'Old Portfolio Site',
     src: '/images/oldport.png',
-    color: 'bg-black',
-    href: 'https://gokayakkus.vercel.app/',
+    color: 'bg-white',
+    href: 'https://portfoliom-blond.vercel.app/',
   },
 ];
 
