@@ -8,7 +8,7 @@ const font = Open_Sans({ weight: '300', subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'GokayAkkus',
-  description: 'Portfolio website',
+  description: '| Portfolio website',
 };
 
 export default function RootLayout({
