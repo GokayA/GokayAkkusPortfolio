@@ -2,6 +2,7 @@ import Header from '@/components/Header';
 import type { Metadata } from 'next';
 import { Open_Sans } from 'next/font/google';
 import './globals.css';
+import { Analytics } from '@vercel/analytics/react';
 
 const font = Open_Sans({ weight: '300', subsets: ['latin'] });
 
@@ -20,6 +21,7 @@ export default function RootLayout({
       <body className={font.className}>
         <Header />
         {children}
+        <Analytics />
       </body>
     </html>
   );
