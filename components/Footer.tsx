@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+
 const Footer = () => {
   return (
     <div className="overflow-hidden flex gap-10 justify-between text-sm w-full">

@@ -9,11 +9,11 @@ const Landing = () => {
   const containerRef = useRef(null);
   const isInView = useInView(containerRef);
   return (
-    <div className="flex relative h-[100vh] overflow-hidden text-white  justify-between p-4 sm:p-20 ">
+    <div className="flex relative h-[100vh] overflow-hidden text-white  justify-between p-4 sm:p-20">
       <div className="flex flex-col justify-between">
         <div>
-          <h1 className="text-8xl sm:text-9xl ">I&apos;m Gokay</h1>
-          <h1 className="text-8xl sm:text-9xl ">Akkus</h1>
+          <h1 className="text-8xl sm:text-9xl">I&apos;m Gokay</h1>
+          <h1 className="text-8xl sm:text-9xl">Akkus</h1>
         </div>
         <div
           ref={containerRef}
@@ -33,13 +33,13 @@ const Landing = () => {
               variants={landingAnimation}
               initial="initial"
               animate={isInView ? 'enter' : 'exit'}
-              className="text-4xl sm:text-6xl xl:w-3/5 break-words flex "
+              className="text-4xl sm:text-6xl xl:w-3/5 break-words flex"
             >
               <Shell size={60} /> Learn more about me
             </motion.p>
             <p>
               <Mouse
-                className="animate-bounce pt-4 absolute bottom-5 text-center left-0 right-0 m-auto  "
+                className="animate-bounce pt-4 absolute bottom-5 text-center left-0 right-0 m-auto"
                 size={60}
               />
             </p>
@@ -57,7 +57,7 @@ const Landing = () => {
             Projects
           </motion.div>
         </Link>
-        <Link href="#contact" className="text-lg font-semibold ">
+        <Link href="#contact" className="text-lg font-semibold">
           <motion.div
             variants={landingButtons}
             initial="initial"

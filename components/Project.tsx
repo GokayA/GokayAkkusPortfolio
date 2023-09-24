@@ -19,7 +19,7 @@ const Project: FC<ProjectProps> = ({ setModal, title, index, href }) => {
       <div
         onMouseOver={() => setModal({ active: true, index: index })}
         onMouseOutCapture={() => setModal({ active: false, index: index })}
-        className="flex sm:flex-row flex-col gap-2 justify-between items-center w-full py-12 px-24 transition-all ease-linear group border-t-2 hover:opacity-40 "
+        className="flex sm:flex-row flex-col gap-2 justify-between items-center w-full py-12 px-24 transition-all ease-linear group border-t-2 hover:opacity-40"
       >
         <h2 className="text-5xl sm:text-6xl group-hover:-translate-x-2 transition-all ease-linear font-normal">
           {title}

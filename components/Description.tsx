@@ -34,14 +34,14 @@ const Description = () => {
               <span
                 key={index}
                 ref={containerRef}
-                className="gap-2 mr-1 inline-flex relative overflow-hidden "
+                className="gap-2 mr-1 inline-flex relative overflow-hidden"
               >
                 <motion.span
                   custom={index}
                   variants={descriptionSlideUp}
                   initial="initial"
                   animate={isInView ? 'open' : 'closed'}
-                  className="text-2xl w-[80%] font-semibold leading-7 "
+                  className="text-2xl w-[80%] font-semibold leading-7"
                 >
                   {word}
                 </motion.span>

@@ -24,7 +24,7 @@ const Navbar = ({}) => {
   ];
   return (
     <motion.div
-      className="overflow-hidden flex justify-between  sm:p-10  h-full fixed right-0 top-0 bg-[#292929] text-white z-[30]"
+      className="overflow-hidden flex justify-between sm:p-10 h-full fixed right-0 top-0 bg-[#292929] text-white z-[30]"
       variants={navbarMenuSlide}
       initial="initial"
       animate="enter"
@@ -41,11 +41,11 @@ const Navbar = ({}) => {
                 exit="exit"
                 initial="initial"
                 key={i}
-                className="relative flex items-center "
+                className="relative flex items-center"
               >
                 <div className="relative flex items-center group">
                   <Link href={item.href}>{item.title}</Link>
-                  <div className="w-3 h-3 rounded-full absolute top-1/2 -left-4 bg-white transform -translate-y-1/2 opacity-0 transition-opacity duration-200 group-hover:opacity-100 group-hover:transition-all group-hover:duration-500 "></div>
+                  <div className="w-3 h-3 rounded-full absolute top-1/2 -left-4 bg-white transform -translate-y-1/2 opacity-0 transition-opacity duration-200 group-hover:opacity-100 group-hover:transition-all group-hover:duration-500"></div>
                 </div>
               </motion.div>
             );

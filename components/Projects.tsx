@@ -33,7 +33,7 @@ const projects = [
 const Projects = () => {
   const [modal, setModal] = useState({ active: false, index: 0 });
   return (
-    <div className=" flex overflow-hidden pt-48 placeholder:b-12 items-center  justify-center border-t-4 h-full bg-[#f4f4f4]">
+    <div className="flex overflow-hidden pt-48 placeholder:b-12 items-center  justify-center border-t-4 h-full bg-[#f4f4f4]">
       <div className="sm:flex hidden w-[1000px]  items-center justify-center flex-col">
         {projects.map((project, index) => {
           return (
@@ -47,7 +47,7 @@ const Projects = () => {
           );
         })}
       </div>
-      <div className=" w-[400px]  flex items-center justify-center  overflow-hidden">
+      <div className="w-[400px] flex items-center justify-center overflow-hidden">
         <div className="sm:hidden h-full w-full flex flex-col">
           {projects.map((project, index) => {
             return (
@@ -59,7 +59,7 @@ const Projects = () => {
                   setModal={setModal}
                 />
                 <div
-                  className={`${project.color}  relative flex justify-center items-center h-full `}
+                  className={`${project.color} relative flex justify-center items-center h-full`}
                 >
                   <Image
                     src={project.src}

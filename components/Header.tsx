@@ -67,7 +67,7 @@ const Header = () => {
         onClick={() => setIsActive(!isActive)}
         className="z-40 scale-0 fixed  m-5 w-20 h-20"
       >
-        <div className="relative text-[#4A55A2] pt-10 ">
+        <div className="relative text-[#4A55A2] pt-10">
           {isActive ? <X size={40} /> : <Menu size={40} />}
         </div>
       </div>

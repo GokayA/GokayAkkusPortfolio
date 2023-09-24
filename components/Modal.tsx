@@ -75,7 +75,7 @@ const Modal: FC<ModalProps> = ({ projects, modal, className }) => {
             return (
               <div
                 key={index}
-                className={`${project.color}  relative flex justify-center items-center h-full `}
+                className={`${project.color}  relative flex justify-center items-center h-full`}
               >
                 <Image
                   src={project.src}
@@ -100,7 +100,7 @@ const Modal: FC<ModalProps> = ({ projects, modal, className }) => {
         variants={scaleAnimation}
         animate={active ? 'enter' : 'closed'}
         initial="initial"
-        className="flex w-20 z-50 text-[#141516] font-bold h-20 bg-transparent absolute pointer-events-none   justify-center items-center rounded-full "
+        className="flex w-20 z-50 text-[#141516] font-bold h-20 bg-transparent absolute pointer-events-none   justify-center items-center rounded-full"
         ref={cursorLabelRef}
       >
         live

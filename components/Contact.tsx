@@ -17,7 +17,7 @@ const Contact = () => {
     <motion.div
       style={{ y }}
       ref={contactRef}
-      className="overflow-hidden relative z-0 flex flex-col h-full justify-between px-20 w-full   items-start content-start bg-[#141516]"
+      className="overflow-hidden relative z-0 flex flex-col h-full justify-between px-20 w-full items-start content-start bg-[#141516]"
     >
       <div className="pt-80 sm:pt-52 sm:h-[80vh] w-full Top h-full text-6xl font-thin text-white">
         Contacts
@@ -35,7 +35,7 @@ const Contact = () => {
               </a>
             </motion.div>
             <div className="pt-10 flex gap-2 flex-col">
-              <h1 className="text-xl text-gray-400  ">Socials</h1>
+              <h1 className="text-xl text-gray-400">Socials</h1>
               <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
                 <Link
                   target="_blank"
