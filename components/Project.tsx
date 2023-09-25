@@ -25,7 +25,7 @@ const Project: FC<ProjectProps> = ({ setModal, title, index, href }) => {
           {title}
         </h2>
         <p className="font-light group-hover:translate-x-2 transition-all ease-linear">
-          Design & Development
+          Development
         </p>
       </div>
     </Link>
