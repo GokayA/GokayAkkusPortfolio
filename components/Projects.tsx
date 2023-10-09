@@ -3,12 +3,18 @@ import { useState } from 'react';
 import Modal from './Modal';
 import Project from './Project';
 
-const projects = [
+export const projects = [
   {
     title: 'Daily Good Product',
     src: '/images/dailygood.png',
     color: 'bg-neutral-400',
     href: 'https://dailygoodproduct.vercel.app/',
+  },
+  {
+    title: 'Fancy Tshirts Ecommerce ',
+    src: '/images/fancy.png',
+    color: 'bg-gray-300',
+    href: 'https://fancy-tshirts.vercel.app/',
   },
   {
     title: 'Spotify Clone',
