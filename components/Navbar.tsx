@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Footer from './Footer';
 import { navbarMenuSlide, navbarSlide } from './transitions/transitions';
 
-const Navbar = ({}) => {
+const Navbar = () => {
   const navItems = [
     {
       title: 'Home',

@@ -5,11 +5,16 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Menu, X } from 'lucide-react';
 import { useLayoutEffect, useRef, useState } from 'react';
 import Navbar from './Navbar';
+import { useOnClickOutside } from '@/hooks/use-on-click-outside';
 
 const Header = () => {
   const burgerRef = useRef(null);
-
+  const navbarRef = useRef<HTMLDivElement>(null);
   const [isActive, setIsActive] = useState<boolean>(false);
+
+  useOnClickOutside(navbarRef, () => {
+    setIsActive(false);
+  });
   useLayoutEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
     gsap.to(burgerRef.current, {
@@ -61,7 +66,10 @@ const Header = () => {
     });
   }, []);
   return (
-    <div className="overflow-hidden  flex justify-end p-10 w-full font-light absolute z-10 top-0 text-white  items-center">
+    <div
+      ref={navbarRef}
+      className="overflow-hidden  flex justify-end p-10 w-full font-light absolute z-10 top-0 text-white  items-center"
+    >
       <div
         ref={burgerRef}
         onClick={() => setIsActive(!isActive)}
