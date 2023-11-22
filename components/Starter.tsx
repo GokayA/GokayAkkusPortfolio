@@ -53,7 +53,7 @@ const Starter = () => {
 
   return (
     <main ref={main}>
-      <section className="sticky h-[100vh] top-0 ">
+      <section className="sticky h-[100dvh] top-0 ">
         <Landing />
       </section>
       <section className="sticky top-0">

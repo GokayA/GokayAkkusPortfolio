@@ -10,7 +10,7 @@ const Landing = () => {
   const isInView = useInView(containerRef);
 
   return (
-    <div className="flex relative h-[100vh] overflow-hidden text-white  justify-between p-4 sm:p-20">
+    <div className="flex relative h-[100dvh] overflow-hidden text-white  justify-between p-4 sm:p-20">
       <div className="flex flex-col justify-between">
         <div>
           <h1 className="text-8xl sm:text-9xl ">I&apos;m Gokay</h1>
