@@ -68,7 +68,7 @@ const Header = () => {
   return (
     <div
       ref={navbarRef}
-      className="overflow-hidden  flex justify-end p-10 w-full font-light absolute z-10 top-0 text-white  items-center"
+      className="overflow-hidden flex justify-end p-10 w-full font-light absolute z-10 top-0 text-white  items-center"
     >
       <div
         ref={burgerRef}

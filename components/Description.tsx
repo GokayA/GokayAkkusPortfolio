@@ -23,7 +23,7 @@ const Description = () => {
           <div
             data-scroll
             data-scroll-speed={0.1}
-            className="font-bold text-2xl button w-44 h-44 bg-[#1c1d20] text-white rounded-full  flex items-center justify-center cursor-pointer"
+            className="antialiased font-bold text-2xl button w-44 h-44 bg-[#1c1d20] text-white rounded-full  flex items-center justify-center cursor-pointer"
           >
             About Me
           </div>
@@ -53,15 +53,15 @@ const Description = () => {
           variants={descriptionOpacity}
           initial="initial"
           animate={isInView ? 'open' : 'closed'}
-          className="font-semibold text-2xl leading-7 uppercase"
+          className="font-semibold text-2xl leading-7 uppercase antialiased"
         >
           I consider my self passionate about{' '}
-          <span className="text-red-800">technology</span>. I like researching
-          and learning about new technologies also I am using them into my
-          projects to improve my skills. Nowadays, I am
-          <span className="text-red-800"> working on </span>my latest project
-          which is building an e-commerce website that will help me learn new
-          skills.
+          <span className="text-red-800 antialiased">technology</span>. I like
+          researching and learning about new technologies also I am using them
+          into my projects to improve my skills. Nowadays, I am
+          <span className="text-red-800 antialiased"> working on </span>my
+          latest project which is building an e-commerce website that will help
+          me learn new skills.
         </motion.p>
       </div>
     </div>

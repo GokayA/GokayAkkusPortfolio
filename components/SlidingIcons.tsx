@@ -84,7 +84,7 @@ const SlidingIcons = () => {
       </motion.div>
       <motion.div
         style={{ x: x2 }}
-        className="slider2 relative flex w-[120vw] left-[-10vw] gap-[3vw]"
+        className="slider2  relative flex w-[120vw] left-[-10vw] gap-[3vw]"
       >
         {slider2.map((project, index) => {
           return (
